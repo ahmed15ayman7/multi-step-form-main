@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  border: none !important;
+  outline: none !important;
+}
+body {
+    
+  background-color: var(--Magnolia) !important;
+  font-family: "Epilogue", sans-serif;
+}
+p {
+    font-size: 16px !important;
+    color: var(--Cool-gray);
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--Marine-blue) !important;
+}
+.btn-main {
+    pointer-events: none;
+    color: var(--White) !important;
+    border: 1px var(--White) solid !important;
+  
+    font-size: 15px !important;
+  
+    background-color: transparent !important;
+  }
+.btn-main.active {
+  color: var(--Marine-blue) !important;
+  background-color: var(--Light-blue) !important;
+}
+.text-feild{
+    position: relative;
+}
+.text-feild input:not([type="submit"]){
+    border: 1px var(--Cool-gray) solid !important;
+}
+.btn-next-step{
+    background: var(--Marine-blue) !important;
+    color: var(--White) !important;
+    padding: 10px 20px !important;
+    border-radius: 10px !important;
+    justify-self: end !important;
+}
+.btn-next-step:focus{
+    box-shadow: none !important;
+}
+.btn-next-step:hover{
+    opacity: .8;
+}
+.go-back{
+    color: var(--Cool-gray) !important;
+}
+.go-back:hover{
+    color: var(--Marine-blue) !important;
+}
+.Change{
+    cursor: pointer;
+    color: var(--Cool-gray) !important;
+}
+.Change:hover{
+    color: var(--Purplish-blue) !important;
+}
+.Confirm{
+    color: var(--White) !important;
+    background-color: var(--Purplish-blue) !important;
+}
+
+.wrong input:not([type="submit"]) {
+    position: relative !important;
+    border: 1px solid var(--Strawberry-red) !important;
+    color: var(--Strawberry-red) !important;
+}
+.wrong::before {
+    content: "This field is required" !important;
+    position: absolute !important;
+    top: -45% !important;
+    right: 0 !important;
+    font-size: 15px;
+    color: var(--Strawberry-red);
+}
+.succes input:not([type="submit"]) {
+    
+    border: 1px solid var(--Purplish-blue) !important;
+    color: var(--Marine-blue) !important;
+}
+
+.home {
+    background: var(--White);
+    width: 70% !important;
+    margin-top: 70px!important;
+    padding-right: 100px !important;
+    
+}
+.steps {
+    padding-bottom: 200px !important;
+    background-size: cover;
+  background: url(../assets/images/bg-sidebar-desktop.svg) no-repeat;
+}
+.steps ul li div h6{
+    color: var(--White) !important;
+}
+.Personal-info{
+    overflow: hidden;
+    position: relative !important;
+}
+.step-1,.step-2,.step-3,.step-4,.step-5{
+    
+    background-color: var(--White) !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.step-2 .plans{
+    cursor: pointer;
+    border: 1px var(--Cool-gray) solid !important;
+    
+}
+.step-2 .plans.active{
+    border-color: var(--Purplish-blue) !important;
+    background-color: var(--Alabaster) !important;
+}
+.step-2 .month{
+    background: var(--Alabaster);
+
+}
+.step-2 .month .ch-m-y{
+    position: relative;
+    
+    
+}
+.step-2 .month .ch-m-y div{
+    position: relative;
+    width: 50px;
+    height: 20px;
+    background-color: var(--Purplish-blue);
+    border-radius: 25px;
+}
+
+.step-2 .month .ch-m-y input{
+    position: absolute !important;
+    width: 50px !important;
+    height: 20px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+.step-2 .month .ch-m-y input + div::before{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: var(--White);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    box-shadow: inset 1px 1px 3px 0px var(--Purplish-blue),-1px -1px 3px 0px var(--Purplish-blue);
+    transition: all 2s;
+}
+.step-2 .month .ch-m-y input:checked + div::before{
+    left: 65%;
+    transform: translateY(-50%) rotate(360deg);
+}
+.step-3 .pick-add{
+    border: 1px solid var(--Cool-gray) !important;
+  
+    
+}
+.step-3 .pick-add.active{
+    border: 1px solid var(--Purplish-blue) !important;
+    background-color: var(--Alabaster);
+}
+.step-3 .pick-add  [type="checkbox"]{
+    cursor: pointer;
+    accent-color: var(--Purplish-blue) !important;
+
+}
+.step-3 .pick-add .price{
+    color: var(--Purplish-blue) !important;
+}
+.step-4 .Finishing-up{
+    background-color: var(--Alabaster) !important;
+
+}
+.step-4 .total .t-price{
+    color: var(--Purplish-blue) !important;
+}
+
+
+
+@media (max-width: 1024px) {
+  
+
+  
+}
+
+@media (max-width: 750px) {
+    .steps {
+        position: relative;
+        width: 100%;
+        padding-bottom: 90px !important;
+        background: url(../assets/images/bg-sidebar-mobile.svg) no-repeat;
+        background-size: cover;
+    }
+    
+    .home {
+        background-color: var(--Magnolia) !important;
+        
+        height: 100vh !important;
+        width: 100% !important;
+        margin-top: 0px!important;
+        padding-right: 0px !important;
+        
+    }
+
+    .steps  .n-s{
+        position: absolute;
+    }
+    .steps  .n-s.n1{
+        left: 20%;
+        top: 10%;
+    }
+    .steps  .n-s.n2{
+        left: 35%;
+        top: 10%;
+    }
+    .steps  .n-s.n3{
+        left: 50%;
+        top: 10%;
+    }
+    .steps  .n-s.n4{
+        left: 65%;
+        top: 10%;
+    }
+    .Personal-info{
+        border-radius: 15px;
+        overflow: hidden;
+        height: 80vh !important;
+        width: 90% !important;
+        position: absolute !important;
+        top:15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .step-2 .plans{
+       display: flex;
+       justify-content: space-evenly;
+        
+    }
+    .step-2 .plans div {
+        width: 75%;
+        margin-top: 5px;
+    }
+    .step-3 .pick-add p:not(.price){
+        font-size: 9px !important;
+    }
+    .step-3 .pick-add h4{
+        font-size: 15px;
+    }
+    
+}
